@@ -1,18 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 
+html, body{
+  height: 100%;
+}
+
 
 // mixins, variables
 $grey: #dddde2;
+$blue: #7d4ce9;
 
 .multiple_bgr{
   background-image: url("../sass/img/drop.png"), url("../sass/img/lines_down.png");
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
-  background-color: #000000;
+  background-color: $grey;
+}
+
+.vh100{
+  height: 100vh;
 }
 
 .image{
-  background-image: url("../img/small_box_bgr_raw.png");
+  background-image: url("../img/small_box_bgr.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,24 +34,25 @@ $grey: #dddde2;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color:#000000;
-	opacity: 0.8;
+	// background-color:#000000;
+  background-color:$grey;
+	opacity: 0.5;
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
 	white-space: -o-pre-wrap;
 }
 
-.lines{
-  position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-  background-image: url("../img/lines_transp.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+// .lines{
+//   position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+//   background-image: url("../img/lines_transp.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+// }
 
 .form_box{
   background-color: #ffffff;
@@ -50,6 +60,7 @@ $grey: #dddde2;
   padding-bottom:3%;
   padding-left: 3%;
   padding-right: 3%;
+  position: relative;
   p{
     margin-bottom: 5%;
   }
@@ -65,27 +76,52 @@ input{
     border-bottom: 2px solid $grey !important;
 }
 
-.square_input{
-  border: 2px solid $grey;
-  width: 80%;
+.dashcontrol {
+	position: relative;
+  input{
+    border: 2px solid $grey;
+    border-radius: 0 !important;
+  }
 }
+.dashcontrol:not(:last-child):after {
+    content: '-';
+    color: $grey;
+    font-weight: bold;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: -3px;
+  }
 
-
-
-.square_span{
-  // width: 5%;
-  // padding: 5px;
-  // margin-left: 3px;
-  color: $grey;
-  // font-weight: bolder;
-}
-
-// .date + .date {
-//     content: "-";
-//     position: absolute;
-//     left: -2%;
-//     top: 6px;
+// .submitholder{
+//   position: relative;
 // }
+
+#submit_btn{
+  position: absolute;
+  left: 80%;
+  bottom: -10%;
+  padding: 10px 50px 10px 50px;
+  background-color: #fb9c06;
+  color: #ffffff;
+  text-transform: uppercase;
+  outline: none;
+  border: 0px;
+  text-align: center;
+  // div{
+  //   position: relative;
+  //   // margin: 20px;
+  //   // span{
+  //   //   position: absolute;
+  //   //   left: 115%;
+  //   //   top: 15%;
+  //   // }
+  // }
+}
+#submit_btn div:first-of-type{
+  float: left;
+}
 
 
 header{
@@ -123,6 +159,20 @@ label{
 
 .space{
   margin-left: 10px;
+}
+
+// media queries
+@media(max-width: 768px){
+  #submit_btn{
+    position: static;
+    margin-top: 10px;
+  }
+  .submitholder{
+    justify-content: flex-end;
+  }
+  .vh100{
+    height: auto;
+  }
 }
 
 
