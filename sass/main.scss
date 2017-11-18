@@ -99,29 +99,19 @@ input{
 // }
 
 #submit_btn{
-  position: absolute;
-  left: 80%;
-  bottom: -10%;
-  padding: 10px 50px 10px 50px;
+  padding: 5px 15px 5px 15px;
   background-color: #fb9c06;
   color: #ffffff;
   text-transform: uppercase;
   outline: none;
   border: 0px;
   text-align: center;
-  // div{
-  //   position: relative;
-  //   // margin: 20px;
-  //   // span{
-  //   //   position: absolute;
-  //   //   left: 115%;
-  //   //   top: 15%;
-  //   // }
-  // }
+  margin-top: 5%;
+  float: right;
 }
-#submit_btn div:first-of-type{
-  float: left;
-}
+// #submit_btn div:first-of-type{
+//   float: left;
+// }
 
 
 header{
