@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 
+
 module.exports = {
     entry: './js/script.js',
     output: {
@@ -16,9 +17,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [{
+                use: [
+                  {
                   loader: 'style-loader',
-                }, {
+                },
+                {
                   loader: 'css-loader',
                 },
                 {

@@ -27,6 +27,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "aos": "^2.2.0",
     "popper.js": "^1.12.3"
   }
 }

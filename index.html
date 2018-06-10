@@ -10,12 +10,9 @@
   <!--HTML5 shiv and Respond.js IE8 support of HTLM5 elements and media queries-->
   <!--[if lt IE 9]> <script src = "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script> <script src = "https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]></script>-->
   <body>
-    <!-- <div class="multiple_bgr"> -->
       <div class="container-fluid multiple_bgr">
-          <!-- <div class="row"> -->
-            <!-- <div class="col-md-8 mx-auto my-auto align-self-center "> -->
                 <div class="row vh100">
-                  <div class="col-md-8 col-sm-8 col-xs-8 mx-auto my-auto align-self-center ">
+                  <div class="col-md-8 col-sm-8 col-10 mx-auto my-auto align-self-center ">
                     <div class="row">
                       <div class="col-md-10 col-sm-10">
                         <header>
@@ -24,7 +21,7 @@
                       </div>
                     </div>
                     <div class="row">
-                    <div class="col-md-4 image">
+                    <div class="d-md-block d-lg-block col-md-4 image d-sm-none d-none">
                       <div class="filter"></div>
                       <div class="lines"></div>
                     </div>
@@ -32,35 +29,31 @@
                       <div class="row">
                           <div class="col-md-10 mx-auto">
                             <p>Welcome to our application, please create an account!</p>
-                            <form>
+                            <form name="registration" onsubmit="return(validate());">
                                     <label for="name">Your name</label>
                                       <div class="row">
                                           <div class="col-md-12">
-                                              <input type="text" class="wide line_input" placeholder="John Doe"></input>
+                                              <input type="text" name="username" class="wide line_input" placeholder="John Doe"></input>
                                           </div>
                                       </div>
 
 
                                     <label for="number">Mobile</label>
                                       <div class="row">
-                                          <div class="col-md-4">
-                                              <input type="tel"  class="line_input wide"placeholder="+48 (PL)"></input>
-                                          </div>
-
-                                          <div class="col-md-8 offset-md-1">
-                                                <input type="tel" class="line_input wide" placeholder="500 "></input>
+                                          <div class="col-md-12">
+                                              <input type="tel" name="number" class="line_input wide" placeholder="500  +(48)"></input>
                                           </div>
                                       </div>
 
                                     <label for="gender">Gender</label>
                                     <div class="row">
-                                      <div class="col-md-2">
+                                      <div class="col-md-3 col-sm-6 col-6 gender">
                                         <label class="border_grey">
                                           <img src="img/male.png"></img>
                                             <input type="radio" name="male"></input>
                                         </label>
                                       </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3 col-sm-6 col-6 gender">
                                           <label class="border_grey">
                                             <img src="img/female.png"></img>
                                               <input type="radio" name="female"></input>
@@ -70,14 +63,14 @@
 
                                     <label for="dateofbirth">Date of birth</label>
                                     <div class="row">
-                                      <div class="col-md-2 dashcontrol">
-                                        <input class="form-control"  placeholder="01" type="day">
+                                      <div class="col-md-3 col-lg-2 dashcontrol">
+                                        <input class="form-control" name="dayOfBirth" placeholder="01" type="day">
                                       </div>
-                                      <div class="col-md-5 dashcontrol ">
-                                        <input class="form-control" placeholder="January" type="text">
+                                      <div class="col-md-4 col-lg-5 dashcontrol ">
+                                        <input class="form-control" name="monthOfBirth" placeholder="January" type="text">
                                       </div>
-                                      <div class="col-md-5 dashcontrol ">
-                                        <input class="form-control" placeholder="1999" type="year">
+                                      <div class="col-md-5 col-lg-5 dashcontrol ">
+                                        <input class="form-control" name="yearOfBirth" placeholder="1999" type="year">
                                       </div>
                                     </div>
                                     <div class="row submitholder">
@@ -93,15 +86,9 @@
                       </div>
                       </div>
                       </div>
+                      <!-- end of row100 -->
                     </div>
-                <!-- </div> -->
-            <!-- </div> -->
             <!-- end of main container and background-->
               </div>
-
-          </div>
-      </div>
-
-    </div>
   </body>
   </html>
